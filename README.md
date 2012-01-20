@@ -10,6 +10,12 @@ Compile the program with
 
 	$ make
 
+to build it in the current directory or use
+
+	# make install
+
+to install it in `/usr/local/bin`.
+
 USE
 ---
 
@@ -28,4 +34,11 @@ You may use it in a bootup script like this:
 
 So you may configure your system without the need of SLAAC (Stateless Address Autoconfiguration, as described in RFC 2462) and Privacy Extensions (RFC 4941). This is nice when using a 6over4 tunnel which does not provide SLAAC but you want to use changing addresses.
 
-ATTENTION: This solution is not as elegant and secure as SLAAC, so use it only when you're sure what you're doing!!!
+**ATTENTION**: This solution is not as elegant and secure as SLAAC, so use it only when you are sure what you are doing!!!
+
+REMOVING
+--------
+
+You may uninstall randip using
+
+    # make uninstall
