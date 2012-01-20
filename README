@@ -8,7 +8,7 @@ COMPILING
 
 Compile the program with a command like
 
-	$ gcc -o randip randip6.c
+	$ gcc -std=c99 -o randip randip6.c
 
 USE
 ***
