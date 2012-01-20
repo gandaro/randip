@@ -10,6 +10,12 @@ Compile the program with
 
 	$ make
 
+to build it in the current directory or use
+
+	# make install
+
+to install it in `/usr/local/bin`.
+
 USE
 ---
 
@@ -31,3 +37,10 @@ ip addr add 1234:4321:5678:8765${SUFFIX}/64 dev eth0
 So you may configure your system without the need of SLAAC (Stateless Address Autoconfiguration, as described in RFC 2462) and Privacy Extensions (RFC 4941).  This is nice when using a 6over4 tunnel which does not provide SLAAC, but you want to use changing addresses.
 
 **ATTENTION**: This solution is not as elegant and secure as SLAAC, so use it only when you are sure what you are doing!!!
+
+REMOVING
+--------
+
+You may uninstall randip using
+
+    # make uninstall
