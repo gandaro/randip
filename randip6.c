@@ -20,8 +20,6 @@ int main(void)
 		printf(":%x",ip_s[i]);
 	}
 	
-	printf("\n");
-
 	close(rfd);
 
 	return 0;
