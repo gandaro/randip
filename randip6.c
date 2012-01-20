@@ -11,7 +11,7 @@ int main(void)
 
 	for (int i = 0; i < 4; ++i)
 	{
-		fread(ip_s+i,2,1,random); // read 2 bytes from urandom
+		assert(fread(ip_s+i,2,1,random) == 1); // read 2 bytes from urandom
 		printf(":%x",ip_s[i]);
 	}
 
