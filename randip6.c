@@ -8,12 +8,10 @@ int main(void)
 	uint16_t ip_s[4];
 
 	assert(random != NULL);
-
-	for (int i = 0; i < 4; ++i)
-	{
-		assert(fread(ip_s+i,2,1,random) == 1); // read 2 bytes from urandom
-		printf(":%x",ip_s[i]);
-	}
+	assert(fread(ip_s,2,4,random) == 4); // read 4 * 2 random bytes
 
 	fclose(random);
+
+	for (int i = 0; i < 4; ++i)
+		printf(":%x",ip_s[i]);
 }
