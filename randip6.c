@@ -1,26 +1,19 @@
 # include <stdio.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
 # include <assert.h>
 # include <stdint.h>
 
 int main(void)
 {
-	int rfd, i = 0;
+	FILE *random = fopen("/dev/urandom","r");
 	uint16_t ip_s[4];
 
-	rfd = open("/dev/urandom",O_RDONLY);
+	assert(random != NULL);
 
-	assert(rfd >= 0);
-	
-	for ( ; i < 4; ++i )
+	for (int i = 0; i < 4; ++i)
 	{
-		read(rfd,ip_s+i,2);
+		fread(ip_s+i,2,1,random); // read 2 bytes from urandom
 		printf(":%x",ip_s[i]);
 	}
-	
-	close(rfd);
 
-	return 0;
+	fclose(random);
 }
