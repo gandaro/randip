@@ -1,2 +1,7 @@
+CFLAGS=-std=c99 -Wall -Wextra
+
 all:
-	gcc -std=c99 -Wall -Wextra -o randip randip6.c
+	gcc $(CFLAGS) -o randip randip6.c
+
+clean:
+	rm randip
