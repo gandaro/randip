@@ -15,9 +15,10 @@ int main(void)
 	assert(rfd >= 0);
 	
 	read(rfd,ip_s,8);
+	
 	for ( ; i < 4; ++i )
 	{
-		printf(":%x",ip_s[i]);
+		printf(":%x",ip_s[i]); // We don't fill the field with 0s because it's unnecessary
 	}
 	
 	close(rfd);
