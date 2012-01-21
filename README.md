@@ -36,7 +36,7 @@ ip addr add 1234:4321:5678:8765${SUFFIX}/64 dev eth0
 
 So you may configure your system without the need of SLAAC (Stateless Address Autoconfiguration, as described in RFC 2462) and Privacy Extensions (RFC 4941).  This is nice when using a 6over4 tunnel which does not provide SLAAC, but you want to use changing addresses.
 
-Don't wonder why randip may generate suffices like :dd:3322:dff:443. As it's defined in various IPv6 recommendations and standards, leading 0s may be missing. 
+Don't wonder why randip may generate suffices like :dd:3322:dff:443.  As it's defined in various IPv6 recommendations and standards, leading 0s may be missing. 
 
 **ATTENTION**: This solution is not as elegant and secure as SLAAC, so use it only when you are sure what you are doing!!!
 
