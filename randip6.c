@@ -14,6 +14,6 @@ int main(void)
 
 	fclose(random);
 
-	for (int i = 0; i < BLOCKS; ++i)
-		printf(":%04x",ip_s[i]);
+	for (uint8_t i = 0; i < BLOCKS; ++i)
+		printf(":%x",ip_s[i]);
 }
