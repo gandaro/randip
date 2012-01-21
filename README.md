@@ -34,6 +34,8 @@ You may use it in a bootup script like this:
 
 So you may configure your system without the need of SLAAC (Stateless Address Autoconfiguration, as described in RFC 2462) and Privacy Extensions (RFC 4941). This is nice when using a 6over4 tunnel which does not provide SLAAC but you want to use changing addresses.
 
+Don't wonder why randip may generate suffices like :dd:3322:dff:443. As it's defined in various IPv6 recommendations and standards, leading 0s may be missing. 
+
 **ATTENTION**: This solution is not as elegant and secure as SLAAC, so use it only when you are sure what you are doing!!!
 
 REMOVING
@@ -42,3 +44,12 @@ REMOVING
 You may uninstall randip using
 
     # make uninstall
+
+PLATFORMS & COMPILERS
+---------------------
+
+randip is tested with the following platforms and development tools:
+
+ - Linux 3.1, GNU make 3.81, gcc-4.6
+ - Linux 3.1, GNU make 3.81, gcc-4.7
+ - OpenBSD 5.0, make included with OpenBSD 5.0, gcc (OpenBSD) 4.2.1
