@@ -10,7 +10,8 @@ int main(void)
 	uint16_t ip_s[BLOCKS];
 
 	assert(random != NULL);
-	assert(fread(ip_s,2,BLOCKS,random) == BLOCKS); // read 4 * 2 random bytes
+	// read 4 * 2 random bytes
+	assert(fread(ip_s,2,BLOCKS,random) == BLOCKS);
 
 	fclose(random);
 
