@@ -1,27 +1,13 @@
-# include <stdio.h>
-# include <stdlib.h>
-# include <fcntl.h>
-# include <unistd.h>
-# include <assert.h>
-# include <stdint.h>
+#define _POSIX_SOURCE
+
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main(void)
 {
-	int rfd, i = 0;
-	uint16_t ip_s[4];
+    unsigned int seed = time(NULL);
 
-	rfd = open("/dev/urandom",O_RDONLY);
-
-	assert(rfd >= 0);
-	
-	read(rfd,ip_s,8);
-	
-	for ( ; i < 4; ++i )
-	{
-		printf(":%x",ip_s[i]); // We don't fill the field with 0s because it's unnecessary
-	}
-	
-	close(rfd);
-
-	return 0;
+    for (int i = 0; i < 4; i++)
+        printf(":%x", rand_r(&seed) % (0xffff+1));
 }

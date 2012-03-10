@@ -1,4 +1,4 @@
-CC=gcc
+CC=cc
 SHELL=/bin/sh
 INSTALL=install
 INSTALL_PROGRAM=$(INSTALL)
