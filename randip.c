@@ -1,4 +1,6 @@
+#ifndef _POSIX_SOURCE
 #define _POSIX_SOURCE
+#endif
 
 #include <time.h>
 #include <stdio.h>
