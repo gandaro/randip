@@ -14,7 +14,7 @@ to build it in the current directory or use
 
 	# make install
 
-to install it in `/usr/local/bin`.
+to install it in */usr/local/bin*. (`make install` installs randip with debugging symbols; use `install-strip` to install without them.)
 
 USE
 ---
@@ -43,13 +43,13 @@ REMOVING
 
 You may uninstall randip using
 
-    # make uninstall
+	# make uninstall
 
 PLATFORMS & COMPILERS
 ---------------------
 
 randip is tested with the following platforms and development tools:
 
- - Linux 3.1, GNU make 3.81, gcc-4.6
+ - Linux 3.0/3.1, GNU make 3.81, gcc-4.6
  - Linux 3.1, GNU make 3.81, gcc-4.7
  - OpenBSD 5.0, make included with OpenBSD 5.0, gcc (OpenBSD) 4.2.1
