@@ -9,17 +9,17 @@ INSTALL_PROGRAM=$(INSTALL)
 .SUFFIXES:
 .SUFFIXES: .c
 
-all:
+randip: randip6.c
 	$(CC) -o randip $(CFLAGS) randip6.c
 
-install:
+install: randip
 	$(INSTALL) randip $(DESTDIR)$(PREFIX)/bin
 
-install-strip:
+install-strip: randip
 	$(MAKE) INSTALL_PROGRAM='$(INSTALL) -s' install
 
 clean:
-	rm randip
+	-rm -f randip
 
 uninstall:
-	rm $(DESTDIR)$(PREFIX)/bin/randip
+	-rm -f $(DESTDIR)$(PREFIX)/bin/randip
